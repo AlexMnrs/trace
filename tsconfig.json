@@ -26,7 +26,7 @@
     "src",
     "tests",
     "forge.config.ts",
-    "vite.*.config.ts",
-    "vitest.config.ts"
+    "vite.*.config.mts",
+    "vitest.config.mts"
   ]
 }

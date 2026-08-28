@@ -10,6 +10,12 @@ The renderer is isolated from Node.js. A preload bridge exposes only filename
 search, file opening, and file location actions. System access stays in the
 Electron main process.
 
+Electron Forge's Vite plugin emits the main and preload entry points as
+CommonJS. The package intentionally does not declare `"type": "module"`, so
+Electron interprets those generated `.js` files consistently. The renderer is
+still built as a browser bundle and does not share the main process's module
+loader.
+
 ## Search backend
 
 The initial backend is `plocate`, invoked directly without a shell. The backend
